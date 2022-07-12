@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://pimingxin.github.io/miao/css-block-layout.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    header {
+      background-color: black;
+      width: 100%;
+    }
+    .p1 {
+      max-width: 600px;
+      margin: 0 auto;
+      /* height: 4em; */
+      color: white;
+    }
+    .p2 {
+      max-width: 600px;
+      margin: 20px auto ;
+    }
+    div#d1 {
+      max-width: 600px;
+      margin: auto;
+
+    }
+    div#d1 div {
+      width: 180px;
+      height: 40px;
+      background-color: pink;
+      border: solid 3px black;
+      margin-bottom: 15px;
+      text-align: center;
+      line-height: 34px;
+      /* float: left; */
+
+    }
+    div#d1 div:hover {
+      background-color: red;
+    }
+
+    #d1 div:nth-child(3n+1) {
+      margin-left: 0;
+    }
+    #d1 div:nth-child(3n+2) {
+      margin-left: 210px;
+      margin-top: -61px;
+    }
+
+    #d1 div:nth-child(3n+3) {
+      margin-left: 420px;
+      margin-top: -61px;
+    }
+    .p3 {
+      max-width: 600px;
+      margin: auto;
+      border-bottom: 1px dotted #000;
+      height: auto;
+    }
+    .p4 {
+      border-bottom: none;
+    }
+    .p5 {
+      background-color: #ee8aee;
+      padding: auto;
+      text-align: center;
+
+    }
+  </style>
+</head>
+<body style="">
+  <header><p class="p1">hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</p></header>
+  <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  <div id="d1">
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+  </div>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3 p4">link</p>
+    <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
+
+</body></html>
