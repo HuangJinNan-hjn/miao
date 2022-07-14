@@ -41,7 +41,7 @@
     }
 
     #d1 div:nth-child(3n+1) {
-      margin-left: 0;
+      margin-left: -8px;
     }
     #d1 div:nth-child(3n+2) {
       margin-left: 210px;
@@ -49,7 +49,7 @@
     }
 
     #d1 div:nth-child(3n+3) {
-      margin-left: 420px;
+      margin-left: 422px;
       margin-top: -61px;
     }
     .p3 {
@@ -65,11 +65,28 @@
       background-color: #ee8aee;
       padding: auto;
       text-align: center;
+    }
+    .inline {
+      max-width: 618px;
+      margin: auto;
+    }
+    .inline span {
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      border: solid 3px black;
+      background-color: pink;
+      text-align: center;
+      line-height: 40px;
 
     }
+    .inline span:nth-child(3n+2) {
+      margin: 0px 30px 15px 30px;
+    }
+
   </style>
 </head>
-<body style="">
+<body >
   <header><p class="p1">hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</p></header>
   <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
   <div id="d1">
@@ -85,6 +102,12 @@
     <div>边框宽度3px</div>
     <div>产品</div>
     <div>产品</div>
+  </div>
+  <div class="inline">
+    <span>宽180高40(包含边框)</span><span>产品</span><span>产品</span>
+    <span>水平间隙30px</span><span>产品</span><span>产品</span>
+    <span>垂直间隙15px</span><span>产品</span><span>产品</span>
+    <span>边框宽度3px</span><span>产品</span><span>产品</span>
   </div>
     <p class="p3">link</p>
     <p class="p3">link</p>
