@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<hea>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    header >ul >li {
+      float: left;
+      width: 4em;
+      display: block;
+      color: #5b595c;
+    }
+    header {
+      /* position: relative; */
+      width: 100%;
+      height: 2em;
+      line-height: 2em;
+      background-color: #221f22;
+    }
+    li {
+      display: none;
+      width: 300px;
+      padding: 0 .5em;
+      /* position: absolute; */
+      background-color:#2d2a2e ;
+    }
+    header >ul >li:hover  >ul.files >li{
+      display: block;
+      float: left;
+    }
+    .key:hover >ul >li {
+      display: block;
+    }
+    .key {
+      position: relative;
+    }
+    .menu  {
+      position: absolute;
+      left: calc(300px + 1em);
+      margin-top: -2em;
+    }
+  </style>
+
+<body>
+  <header>
+    <ul>
+      <li>文件(F)
+        <ul class="files">
+          <li>新建文本文件</li>
+          <li>新建文件</li>
+          <li>新建窗口</li>
+          <li>打开文件</li>
+          <li>打开文件夹</li>
+          <li>从文件打开工作区</li>
+          <li class="key">打开最近的文件
+            <ul class="menu">
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+              <li>1</li>
+            </ul>
+          </li>
+          <li>将文件夹加到工作区</li>
+          <li>将工作区另存为</li>
+          <li>复制工作区</li>
+          <li>保存</li>
+          <li>另存为</li>
+          <li>全部保存</li>
+          <li>自动保存</li>
+          <li>首选项</li>
+          <li>还原文件</li>
+          <li>关闭编辑器</li>
+          <li>关闭文件夹</li>
+          <li>关闭窗口</li>
+          <li>退出</li>
+      </ul>
+      </li>
+      <li>编辑(E)
+        <ul class="files">
+          <li>撤销</li>
+          <li>恢复</li>
+          <li>剪切</li>
+          <li>复制</li>
+          <li>粘贴</li>
+          <li>查找</li>
+          <li>替换</li>
+          <li>在文件中查找</li>
+          <li>在文件中替换</li>
+          <li>切换行注释</li>
+          <li>切换块注释</li>
+          <li>Emmet:展开缩写</li>
+        </ul>
+      </li>
+      <li>选择(S)</li>
+      <li>查看(V)</li>
+      <li>转到(G)</li>
+      <li>运行(R)</li>
+      <li>终端(T)</li>
+      <li>帮助(H)</li>
+
+
+  </header>
+</body>
+</html>
