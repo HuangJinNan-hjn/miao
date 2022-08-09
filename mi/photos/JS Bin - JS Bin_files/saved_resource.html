@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://null.jsbin.com/runner -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+
+  <style>
+    button {
+      text-align: center;
+      line-height: 400px;
+      padding: 0;
+      margin: 0;
+      width: 400px;
+      height: 400px;
+      border:1px solid;
+       margin:1000px;
+      font-size: 80px;
+      transform-origin: center -300px;
+      border-radius: 200px;
+      xtransform: skew(0deg , 0deg);
+    }
+    span {
+      display:inline-block;
+      xtransform-origin: center -400px;
+    }
+    button:focus{
+       transform: rotate(3600deg)  ;
+      transition: 20s linear;
+    }
+      button:focus >span{
+       transform: rotate(-3600deg)  ;
+      transition: 20s linear;
+    }
+  
+  </style><style id="jsbin-css">
+
+</style>
+</head>
+<body>
+<button>
+  <span>哈哈哈哈</span>
+
+</button>
+</body></html>
