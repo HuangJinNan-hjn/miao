@@ -41,7 +41,7 @@ var huangjinnan_hjn = {
     return a;
   },
 
-  drop: function (arr, num) {
+  drop: function (arr, num = 1) {
     if (num > arr.length) {
       return [];
     }
@@ -51,11 +51,11 @@ var huangjinnan_hjn = {
     return arr;
   },
 
-  dropRight: function (arr,num) {
+  dropRight: function (arr,num = 1) {
     if (num > arr.length) {
       return [];
     }
-    for (let i = arr.length - 1; i > arr.length - 1 - num; i--) {
+    for (let i = arr.length - 1; i > arr.length - num; i--) {
       arr.pop();
     }
     return arr;
@@ -141,7 +141,8 @@ var huangjinnan_hjn = {
   },
 
   initial: function (arr) {
-    return arr.pop();
+    arr.pop();
+    return arr;
   },
 
   join: function (arr, str) {
@@ -170,7 +171,7 @@ var huangjinnan_hjn = {
   pull: function (arr, str1, str2) {
     let a = [];
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i] !== str1 && arr[2] !== str2) {
+      if (arr[i] !== str1 && arr[i] !== str2) {
         a.push(arr[i]);
       }
     }
