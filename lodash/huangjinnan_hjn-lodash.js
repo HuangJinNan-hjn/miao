@@ -216,9 +216,91 @@ var huangjinnan_hjn = {
       }
     }
     return unique;
-  }
+  },
 
+  uniq(arr) {
+    let unique = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (unique.indexOf(arr[i]) == -1) {
+        unique.push(arr[i]);
+      }
+    }
+    return unique;
+  },
+
+  unzip(arr) {
+    let unique = arr.flat();
+    let ary = [];
+    for (let i = 0; i < unique.length; i++) {
+      if ((typeof unique[i]) === 'string') [ary[0]].push(unique[i]);
+        if ((typeof unique[i]) === 'number')[ary[1]].push(unique[i]);
+        if((typeof unique[i]) === 'boolean')[ary[2]].push(unique[i]);
+    }
+    return ary;
+  },
+
+  without(arr, ...others) {
+    let ary = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (others.indexOf(arr[i]) === -1) {
+        ary.push(arr[i]);
+      }
+    }
+    return ary;
+  },
+
+  xor(arr1 , arr2) {
+    let arr = [];
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr2.indexOf(arr1[i]) === -1) {
+        arr.push(arr1[i]);
+      }
+    }
+    for (let i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) === -1) {
+        arr.push(arr2[i]);
+      }
+    }
+    return arr;
+  },
+
+  zip(...others) {
+    let flatArr = others.flat();
+    console.log(flatArr);
+    let ary = [[],[]];
+    let cur = 0;
+    for (let i = 0; i < flatArr.length; i++) {
+      if (ary[cur].length == 3) cur++;
+      if ((typeof flatArr[i]) === 'string') ary[cur].push(flatArr[i]);
+        if ((typeof flatArr[i]) === 'number')ary[cur].push(flatArr[i]);
+        if((typeof flatArr[i]) === 'boolean')ary[cur].push(flatArr[i]);
+    }
+    return ary;
+  },
+
+  countBy(arr, str) {
+    let obj = {};
+    if (str === 'floor') {
+      for (let i = 0; i < arr.length; i++) {
+        arr[i] = Math.floor(arr[i]);
+        if (arr[i] in obj) {
+          obj[arr[i]]++;
+        } else {
+          obj[arr[i]] = 1;
+         }
+      }
+    } else if (str === 'length') {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length in obj) {
+          obj[arr[i].length]++;
+        } else {
+          obj[arr[i].length] = 1;
+        }
+      }
+    }
+    return obj;
+  }
 }
 
-console.log(huangjinnan_hjn.union([2],[1,2],[3,4]) );
-console.log(huangjinnan_hjn.lastIndexOf([1,2,1,2],2,-22) );
+console.log(huangjinnan_hjn.countBy(["one","two","three"],"length") );
+// console.log(huangjinnan_hjn.zip(["a","b"],[1,2],[true,false]) );
