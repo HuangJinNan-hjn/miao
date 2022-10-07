@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  let c = 'sum(3,minus(mul(2,8),2),2,5,divide(8,2))';
+  let i = 0;
+  function parseExpression(code) {
+    if (code[i] >= 'a' && code[i] <= 'z') {
+      return parseFunctionCall(code)
+    }
+    return parseArgument(code)
+  }
+  function  parseFunctionCall(code) {
+    let obj = {'type' : 'fcall',
+              'arguments':[]};
+    let num = i;
+    while(code[i] >= 'a' && code[i] <= 'z') {
+      i++;
+    }
+    let name = code.slice(num , i);
+    obj.name = name;
+      i++;
+    if(code[i]==')') {
+      i++;
+      return obj;
+    }
+    while(i<code.length) {
+      var expression = parseExpression(code);
+      obj.arguments.push(expression)
+      if(code[i]==')') {
+        i++;
+        break;
+      }else if(code[i]==',') {
+        i++;
+        continue;
+      }
+    }
+    return obj;
+  }
+  function parseArgument(code) {
+    let obj = {'type' : 'literal'}
+    let num = i;
+    while(code[i] >= 0 && code[i] <= 9 && i < code.length) {
+      i++;
+    }
+    obj.value =  code.slice(num , i);
+    return obj;
+  }
+ console.log( parseExpression(c) );;
+
+</script>
+</body>
+</html>
